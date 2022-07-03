@@ -1,7 +1,7 @@
 (defsystem "zaz"
   :version "1.0.0"
   :author "Dumeril"
-  :license "MIT"
+  :license "GPL3"
   :depends-on (:alexandria
 	       :verbose
 	       :uiop

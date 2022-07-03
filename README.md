@@ -1,8 +1,8 @@
-# zenon-az
+# zenon-az-service
 
 A service providing information and updates about Zenon Accelerator-Z proposals and updates.
 
-This service is the data backend for the telegram channel https://t.me/acceleratorz_updates. It does not contain the bot implementation, for that, see https://github.com/dumeriz/zaz_telegram_py, which is using this service.
+This service is the data backend for the telegram channel https://t.me/acceleratorz_updates. It does not contain the bot implementation, for that, see https://github.com/dumeriz/zaz-telegram-py, which is using this service.
 
 Two ZMQ endpoints are provided:
   - A REQ socket, to answer queries about proposals
