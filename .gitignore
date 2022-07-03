@@ -1,0 +1,8 @@
+*.FASL
+*.fasl
+*.lisp-temp
+
+*~
+\#*\#
+*.swp
+projects-backup.cls
