@@ -12,8 +12,9 @@
 (defmacro with-node-at (var endpoint &body body)
   "Wraps `ZENON/CONN:WITH-NODE-AT' into a mutex locked context.'"
   `(bt:with-lock-held (*lock*)
-     (v:info :api "Connecting to node at ~A" ,endpoint)
-     (zenon/conn:with-node-at ,var ,endpoint ,@body)))
+     (handler-case
+	 (zenon/conn:with-node-at ,var ,endpoint ,@body)
+       (t (c) (v:error :api "Condition during connection with ~A: ~A" endpoint c)))))
 
 (defun current-pillar-names (endpoint)
   "Get all pillar names from the node connection at `ENDPOINT'"
